@@ -47,6 +47,9 @@ export default function AboutPage() {
         <Button asChild>
           <Link href="/免费vpn推荐">免费VPN推荐</Link>
         </Button>
+        <Button variant="secondary" asChild>
+          <Link href="/梯子推荐">梯子推荐</Link>
+        </Button>
       </div>
     </div>
   );

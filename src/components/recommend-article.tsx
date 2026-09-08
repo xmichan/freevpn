@@ -66,7 +66,7 @@ export function RecommendArticle({ article }: { article: Article }) {
           首页
         </Link>
         <span>/</span>
-        <span className="text-foreground">免费VPN推荐</span>
+        <span className="text-foreground">{article.breadcrumb}</span>
       </nav>
 
       <div className="mt-6 space-y-3">
@@ -88,7 +88,7 @@ export function RecommendArticle({ article }: { article: Article }) {
 
       <section>
         <h2 className="text-2xl font-semibold tracking-tight">
-          本站推荐的两款免费 VPN
+          {article.productsHeading}
         </h2>
         <div className="mt-6 grid gap-4">
           {PRODUCTS.map((product, index) => (
@@ -183,7 +183,8 @@ export function RecommendArticle({ article }: { article: Article }) {
             >
               努努加速器
             </a>
-            {" "}都是可以放心选的免费 VPN，祝您使用愉快。
+            {" "}
+            {article.summary}
           </CardDescription>
         </CardHeader>
       </Card>

@@ -22,6 +22,11 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link href="/梯子推荐" className="hover:text-foreground">
+                  梯子推荐
+                </Link>
+              </li>
+              <li>
                 <a
                   href="https://www.umivpn.com"
                   className="hover:text-foreground"

@@ -4,7 +4,8 @@ import { SITE_NAME_ZH } from "@/lib/site";
 
 const NAV = [
   { href: "/", label: "首页" },
-  { href: "/免费vpn推荐", label: "免费VPN推荐" },
+  { href: "/免费vpn推荐", label: "免费VPN" },
+  { href: "/梯子推荐", label: "梯子推荐" },
   { href: "/about", label: "关于" },
 ];
 

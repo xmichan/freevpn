@@ -25,7 +25,10 @@ export default function HomePage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-2">
             <Button size="lg" asChild>
-              <Link href="/免费vpn推荐">查看完整推荐</Link>
+              <Link href="/免费vpn推荐">免费VPN推荐</Link>
+            </Button>
+            <Button size="lg" variant="secondary" asChild>
+              <Link href="/梯子推荐">梯子推荐</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <a

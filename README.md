@@ -41,4 +41,4 @@ UmiVPN 是面向 Windows、macOS、iOS、Android 的免费VPN服务。
 
 ---
 
-**免费VPN推荐** · 中国可用 · 免费梯子 · 科学上网 · UmiVPN · 努努加速器
+**免费VPN推荐** · **梯子推荐** · 中国可用 · 免费梯子 · 翻墙软件下载 · 科学上网 · UmiVPN · 努努加速器

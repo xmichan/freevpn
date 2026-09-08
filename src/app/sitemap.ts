@@ -2,22 +2,41 @@ import type { MetadataRoute } from "next";
 import { ARTICLES } from "@/lib/articles";
 import { SITE_ORIGIN, UPDATED_AT } from "@/lib/site";
 
+function absoluteUrl(path: string): string {
+  // Ensures Chinese paths (e.g. /免费vpn推荐) are percent-encoded in sitemap.xml
+  return new URL(path || "/", `${SITE_ORIGIN}/`).href;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date(UPDATED_AT);
-  const staticPaths = ["", "/about", "/privacy"];
 
-  return [
-    ...staticPaths.map((path) => ({
-      url: `${SITE_ORIGIN}${path || "/"}`,
+  const staticEntries: MetadataRoute.Sitemap = [
+    {
+      url: absoluteUrl("/"),
       lastModified,
-      changeFrequency: path === "" ? ("weekly" as const) : ("monthly" as const),
-      priority: path === "" ? 1 : 0.6,
-    })),
-    ...ARTICLES.map((article) => ({
-      url: `${SITE_ORIGIN}${article.path}`,
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    {
+      url: absoluteUrl("/about"),
       lastModified,
-      changeFrequency: "weekly" as const,
-      priority: 0.95,
-    })),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: absoluteUrl("/privacy"),
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.4,
+    },
   ];
+
+  const articleEntries: MetadataRoute.Sitemap = ARTICLES.map((article) => ({
+    url: absoluteUrl(article.path),
+    lastModified,
+    changeFrequency: "weekly",
+    priority: 0.95,
+  }));
+
+  return [...staticEntries, ...articleEntries];
 }

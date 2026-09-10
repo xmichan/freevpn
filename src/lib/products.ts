@@ -62,11 +62,11 @@ export const PRODUCTS: Product[] = [
     chinaUsable: "针对受限网络优化，一键直连",
     obfuscation: "支持通用和专有协议，适配复杂网络环境",
     logs: "不记录",
-    traffic: "不限流量、不限速",
+    traffic: "不限流量",
     devices: "手机（iOS / Android）",
     highlights: [
       "永久免费",
-      "不限流量、不限速",
+      "不限流量",
       "开源核心",
       "App Store / Google Play 双端上架",
       "不限制设备数量",

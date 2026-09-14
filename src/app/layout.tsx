@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "zh_CN",
     siteName: SITE_NAME_ZH,
-    title: `${SITE_NAME_ZH} - 免费VPN / 梯子推荐`,
+    title: `${SITE_NAME_ZH} - VPN / 梯子推荐`,
     description: SITE_TAGLINE,
     url: SITE_ORIGIN,
   },

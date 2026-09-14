@@ -24,7 +24,6 @@ export const metadata: Metadata = {
     "VPN推荐",
     "梯子",
     "翻墙",
-    "科学上网",
     "UmiVPN",
     "努努加速器",
   ],

@@ -44,7 +44,7 @@ export const PRODUCTS: Product[] = [
     ],
     caveats: [
       "非顶级优质BGP/CN2线路，但性价比高",
-      "虽然不限制登录设备数量，但只支持3台设备同时连接",
+      "虽然不限制登录设备数量，但只支持5台设备同时连接",
       "不支持种子下载"
     ],
     ctaLabel: "前往 UmiVPN 官网",

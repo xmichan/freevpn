@@ -14,14 +14,14 @@ export default function HomePage() {
             更新于 {UPDATED_AT_LABEL}
           </Badge>
           <h1 className="max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
-            {SITE_NAME_ZH}
+            VPN推荐 - 2026年中国可用的免费VPN推荐
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            本站只推荐两款我们自己维护的产品：
+            本站推荐两款产品：
             <span className="font-medium text-foreground"> UmiVPN </span>
             （全平台）与
             <span className="font-medium text-foreground"> 努努加速器 </span>
-            （手机永久免费）。
+            （手机永久免费）。两款产品都专为中国网络优化，采用独家开源内核，且都经过了各大应用商店的审核，安全可靠。
           </p>
           <div className="mt-8 flex flex-wrap gap-2">
             <Button size="lg" asChild>

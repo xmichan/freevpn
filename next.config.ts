@@ -1,5 +1,9 @@
 import type { NextConfig } from "next";
 
+/**
+ * Public Chinese paths match search intent (免费vpn / VPN).
+ * Latin aliases mirror competitor URL patterns Bing already indexes.
+ */
 const nextConfig: NextConfig = {
   async rewrites() {
     return [
@@ -19,6 +23,14 @@ const nextConfig: NextConfig = {
         source: "/梯子推荐",
         destination: "/ladder-recommend",
       },
+      {
+        source: "/%E4%B8%AD%E5%9B%BD%E5%8F%AF%E7%94%A8vpn",
+        destination: "/china-vpn",
+      },
+      {
+        source: "/中国可用vpn",
+        destination: "/china-vpn",
+      },
     ];
   },
   async redirects() {
@@ -31,6 +43,72 @@ const nextConfig: NextConfig = {
       {
         source: "/ladder-recommend",
         destination: "/梯子推荐",
+        permanent: true,
+      },
+      {
+        source: "/china-vpn",
+        destination: "/中国可用vpn",
+        permanent: true,
+      },
+      // Competitor-style Latin paths → Chinese canonicals
+      {
+        source: "/free",
+        destination: "/免费vpn推荐",
+        permanent: true,
+      },
+      {
+        source: "/free/",
+        destination: "/免费vpn推荐",
+        permanent: true,
+      },
+      {
+        source: "/free-vpn",
+        destination: "/免费vpn推荐",
+        permanent: true,
+      },
+      {
+        source: "/free-vpn/",
+        destination: "/免费vpn推荐",
+        permanent: true,
+      },
+      {
+        source: "/ranks-vpn",
+        destination: "/中国可用vpn",
+        permanent: true,
+      },
+      {
+        source: "/ranks-vpn/",
+        destination: "/中国可用vpn",
+        permanent: true,
+      },
+      {
+        source: "/cn-use-vpn",
+        destination: "/中国可用vpn",
+        permanent: true,
+      },
+      {
+        source: "/cn-use-vpn/",
+        destination: "/中国可用vpn",
+        permanent: true,
+      },
+      {
+        source: "/vpn",
+        destination: "/中国可用vpn",
+        permanent: true,
+      },
+      {
+        source: "/vpn/",
+        destination: "/中国可用vpn",
+        permanent: true,
+      },
+      {
+        source: "/免费vpn",
+        destination: "/免费vpn推荐",
+        permanent: true,
+      },
+      {
+        source: "/免费VPN",
+        destination: "/免费vpn推荐",
         permanent: true,
       },
     ];

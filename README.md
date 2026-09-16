@@ -5,6 +5,14 @@
 - **[UmiVPN](https://www.umivpn.com)** — 全平台免费VPN  
 - **[努努加速器](https://www.nunu.monster)** — 手机端永久免费VPN
 
+站内专页（便于搜索引擎收录）：
+
+- [/免费vpn推荐](/免费vpn推荐) — 对应搜索「免费VPN」
+- [/中国可用vpn](/中国可用vpn) — 对应搜索「VPN」「中国可用VPN」
+- [/梯子推荐](/梯子推荐) — 对应搜索「梯子推荐」「翻墙软件」
+
+英文别名会 301 到上述中文规范地址：`/free`、`/free-vpn`、`/vpn`、`/ranks-vpn`、`/cn-use-vpn`。
+
 ## 推荐一：UmiVPN（全平台首选）
 
 **官网：** [https://www.umivpn.com](https://www.umivpn.com)
@@ -41,4 +49,4 @@ UmiVPN 是面向 Windows、macOS、iOS、Android 的免费VPN服务。
 
 ---
 
-**免费VPN推荐** · **梯子推荐** · 中国可用 · 免费梯子 · 翻墙软件下载 · 科学上网 · UmiVPN · 努努加速器
+**免费VPN推荐** · **中国可用VPN** · **梯子推荐** · 免费梯子 · 翻墙软件下载 · 科学上网 · UmiVPN · 努努加速器

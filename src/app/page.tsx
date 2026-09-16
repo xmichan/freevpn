@@ -1,33 +1,100 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ProductCard } from "@/components/product-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { PRODUCTS } from "@/lib/products";
-import { SITE_NAME_ZH, UPDATED_AT_LABEL } from "@/lib/site";
+import {
+  PRIMARY_KEYWORDS,
+  SITE_NAME_ZH,
+  SITE_ORIGIN,
+  SITE_TAGLINE,
+  UPDATED_AT_LABEL,
+} from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: `${SITE_NAME_ZH} ${new Date().getFullYear()}｜中国能用的免费VPN / 梯子`,
+  },
+  description: SITE_TAGLINE,
+  keywords: [...PRIMARY_KEYWORDS, "UmiVPN", "努努加速器"],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: `${SITE_NAME_ZH}｜免费VPN / 中国可用VPN`,
+    description: SITE_TAGLINE,
+    url: SITE_ORIGIN,
+    locale: "zh_CN",
+    type: "website",
+  },
+};
+
+const HOME_FAQS = [
+  {
+    q: "免费VPN在中国还能用吗？",
+    a: "部分可以，但很多海外免费VPN在国内连不上。本站推荐面向中国网络优化的 UmiVPN 与努努加速器，并以官网/应用商店下载为准。",
+  },
+  {
+    q: "电脑和手机该怎么选？",
+    a: "电脑 + 手机都要用，选 UmiVPN；主要用手机且希望永久免费，选努努加速器。详细对比见「免费VPN推荐」页。",
+  },
+  {
+    q: "本站只推荐这两款吗？",
+    a: "是的。本站由相关产品方运营，只收录我们维护的 UmiVPN 与努努加速器，并在关于页披露利益关系。",
+  },
+];
 
 export default function HomePage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: HOME_FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  };
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       <section className="border-b">
         <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20">
           <Badge variant="secondary" className="mb-4">
             更新于 {UPDATED_AT_LABEL}
           </Badge>
-          <h1 className="max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
-            VPN推荐 - 2026年中国可用的免费VPN推荐
+          <h1 className="max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
+            免费VPN推荐 - 2026年中国可用的免费VPN / 梯子
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            本站推荐两款产品：
+            寻找
+            <span className="font-medium text-foreground"> 免费VPN </span>、
+            <span className="font-medium text-foreground">中国可用VPN</span>
+            、免费梯子或科学上网方案？本站只推荐两款我们维护的产品：
             <span className="font-medium text-foreground"> UmiVPN </span>
             （全平台）与
             <span className="font-medium text-foreground"> 努努加速器 </span>
-            （手机永久免费）。两款产品都专为中国网络优化，采用独家开源内核，且都经过了各大应用商店的审核，安全可靠。
+            （手机永久免费）。应用商店可下，开源内核，适合海外 AI 与轻度上网。
           </p>
           <div className="mt-8 flex flex-wrap gap-2">
             <Button size="lg" asChild>
               <Link href="/免费vpn推荐">免费VPN推荐</Link>
             </Button>
             <Button size="lg" variant="secondary" asChild>
+              <Link href="/中国可用vpn">中国可用VPN排行</Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
               <Link href="/梯子推荐">梯子推荐</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
@@ -55,9 +122,11 @@ export default function HomePage() {
       <section>
         <div className="mx-auto max-w-5xl space-y-6 px-4 py-12 sm:px-6 sm:py-16">
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight">推荐产品</h2>
+            <h2 className="text-2xl font-semibold tracking-tight">
+              推荐产品（免费VPN / VPN）
+            </h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              按设备选择，先实测再长期使用。
+              按设备选择：电脑优先 UmiVPN，手机永久免费优先努努加速器。
             </p>
           </div>
           <div className="grid gap-4">
@@ -65,6 +134,59 @@ export default function HomePage() {
               <ProductCard key={product.id} product={product} rank={index + 1} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="border-t bg-muted/20">
+        <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
+          <h2 className="text-2xl font-semibold tracking-tight">继续了解</h2>
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            <Link
+              href="/免费vpn推荐"
+              className="rounded-xl border bg-background p-5 transition-colors hover:border-foreground/20"
+            >
+              <h3 className="font-semibold">免费VPN推荐</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                两款免费方案怎么选、流量与安全说明。
+              </p>
+            </Link>
+            <Link
+              href="/中国可用vpn"
+              className="rounded-xl border bg-background p-5 transition-colors hover:border-foreground/20"
+            >
+              <h3 className="font-semibold">中国可用VPN</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                按设备与预算快速选型。
+              </p>
+            </Link>
+            <Link
+              href="/梯子推荐"
+              className="rounded-xl border bg-background p-5 transition-colors hover:border-foreground/20"
+            >
+              <h3 className="font-semibold">梯子推荐</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                翻墙软件下载与使用说明。
+              </p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
+          <h2 className="mb-4 text-2xl font-semibold tracking-tight">
+            常见问题
+          </h2>
+          <Accordion type="single" collapsible className="rounded-xl border px-4">
+            {HOME_FAQS.map((faq, index) => (
+              <AccordionItem key={faq.q} value={`home-faq-${index}`}>
+                <AccordionTrigger>{faq.q}</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
     </div>

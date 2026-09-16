@@ -3,10 +3,20 @@ import { SITE_ORIGIN } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-    },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+      },
+      {
+        userAgent: "bingbot",
+        allow: "/",
+      },
+      {
+        userAgent: "BingPreview",
+        allow: "/",
+      },
+    ],
     sitemap: `${SITE_ORIGIN}/sitemap.xml`,
     host: SITE_ORIGIN,
   };

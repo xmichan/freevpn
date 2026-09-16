@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
-import { SITE_NAME_ZH } from "@/lib/site";
+import { SITE_NAME_ZH, SITE_TAGLINE } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -8,9 +8,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-5xl gap-8 px-4 py-10 sm:grid-cols-2 sm:px-6">
         <div>
           <p className="text-sm font-medium">{SITE_NAME_ZH}</p>
-          <p className="mt-2 text-sm text-muted-foreground">
-            只推荐我们维护的产品：UmiVPN 与 努努加速器。
-          </p>
+          <p className="mt-2 text-sm text-muted-foreground">{SITE_TAGLINE}</p>
         </div>
         <div className="grid grid-cols-2 gap-6 text-sm">
           <div>
@@ -19,6 +17,11 @@ export function SiteFooter() {
               <li>
                 <Link href="/免费vpn推荐" className="hover:text-foreground">
                   免费VPN推荐
+                </Link>
+              </li>
+              <li>
+                <Link href="/中国可用vpn" className="hover:text-foreground">
+                  中国可用VPN排行
                 </Link>
               </li>
               <li>
@@ -61,13 +64,19 @@ export function SiteFooter() {
                   隐私政策
                 </Link>
               </li>
+              <li>
+                <Link href="/sitemap.xml" className="hover:text-foreground">
+                  网站地图
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
       </div>
       <Separator />
       <div className="py-4 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} {SITE_NAME_ZH} · 请遵守当地法律法规合理使用网络工具
+        © {new Date().getFullYear()} {SITE_NAME_ZH} ·
+        请遵守当地法律法规合理使用网络工具
       </div>
     </footer>
   );

@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 export const metadata: Metadata = {
   title: "关于本站与披露",
   description:
-    "免费VPN推荐站 由 UmiVPN / 努努加速器相关产品方运营，本页说明推荐范围与利益关系。",
+    "免费VPN推荐站由 UmiVPN / 努努加速器相关产品方运营，本页说明推荐范围与利益关系。面向「免费VPN」「中国可用VPN」搜索需求。",
   alternates: { canonical: "/about" },
 };
 
@@ -48,6 +48,9 @@ export default function AboutPage() {
           <Link href="/免费vpn推荐">免费VPN推荐</Link>
         </Button>
         <Button variant="secondary" asChild>
+          <Link href="/中国可用vpn">中国可用VPN</Link>
+        </Button>
+        <Button variant="outline" asChild>
           <Link href="/梯子推荐">梯子推荐</Link>
         </Button>
       </div>

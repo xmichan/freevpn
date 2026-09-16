@@ -5,6 +5,7 @@ import { SITE_NAME_ZH } from "@/lib/site";
 const NAV = [
   { href: "/", label: "首页" },
   { href: "/免费vpn推荐", label: "免费VPN" },
+  { href: "/中国可用vpn", label: "中国可用VPN" },
   { href: "/梯子推荐", label: "梯子推荐" },
   { href: "/about", label: "关于" },
 ];
@@ -16,7 +17,7 @@ export function SiteHeader() {
         <Link href="/" className="text-sm font-semibold tracking-tight">
           {SITE_NAME_ZH}
         </Link>
-        <nav className="flex items-center gap-1">
+        <nav className="flex items-center gap-1 overflow-x-auto">
           {NAV.map((item) => (
             <Button key={item.href} variant="ghost" size="sm" asChild>
               <Link href={item.href}>{item.label}</Link>

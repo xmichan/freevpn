@@ -4,7 +4,7 @@ import { LADDER_ARTICLE } from "@/lib/articles";
 import { SITE_ORIGIN } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: LADDER_ARTICLE.title,
+  title: { absolute: LADDER_ARTICLE.title },
   description: LADDER_ARTICLE.description,
   keywords: LADDER_ARTICLE.keywords,
   alternates: {
@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     url: `${SITE_ORIGIN}${LADDER_ARTICLE.path}`,
     locale: "zh_CN",
     type: "article",
+    modifiedTime: LADDER_ARTICLE.updatedIso,
   },
 };
 

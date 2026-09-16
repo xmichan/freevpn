@@ -46,6 +46,10 @@ const HOME_FAQS = [
     a: "电脑 + 手机都要用，选 UmiVPN；主要用手机且希望永久免费，选努努加速器。详细对比见「免费VPN推荐」页。",
   },
   {
+    q: "用 ChatGPT / Claude 会消耗 UmiVPN 的 3GB 吗？",
+    a: "不会。UmiVPN 对 ChatGPT、Gemini、Claude 等常用 AI 站点提供免计量：这些流量不计入免费套餐 3GB。其它网站仍会计入；完整域名列表见 UmiVPN 官网 AI 免流页。",
+  },
+  {
     q: "本站只推荐这两款吗？",
     a: "是的。本站由相关产品方运营，只收录我们维护的 UmiVPN 与努努加速器，并在关于页披露利益关系。",
   },
@@ -86,6 +90,7 @@ export default function HomePage() {
             （全平台）与
             <span className="font-medium text-foreground"> 努努加速器 </span>
             （手机永久免费）。应用商店可下，开源内核，适合海外 AI 与轻度上网。
+            UmiVPN 对 ChatGPT / Gemini / Claude 等常用 AI 站点流量免计量，不占用免费 3GB。
           </p>
           <div className="mt-8 flex flex-wrap gap-2">
             <Button size="lg" asChild>

@@ -23,4 +23,5 @@ export const PRIMARY_KEYWORDS = [
   "梯子推荐",
   "翻墙软件",
   "科学上网",
+  "AI免流",
 ] as const;

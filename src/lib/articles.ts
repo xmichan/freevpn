@@ -31,7 +31,7 @@ const PRODUCT_SECTIONS: Article["sections"] = [
     heading: "全平台免费VPN：UmiVPN",
     body: [
       `UmiVPN 由开发完全开源免费的 [VX代理客户端](https://vx.5vnetwork.com) 的团队开发，采用独家开源 [VX内核](https://github.com/5VNetwork/vx-core)，安全可靠，功能齐全。官网：[https://www.umivpn.com](https://www.umivpn.com)。`,
-      "免费套餐每月 3GB 流量：日常查资料、用 ChatGPT / Claude、搜谷歌、偶尔看视频，轻度用户通常够用一个月。付费套餐不限流量，有十几个地区可选，适合对地区有要求或重度使用的用户。",
+      "免费套餐每月 3GB 流量（ChatGPT、Gemini、Claude AI 站点免计量，不占用这 3GB）：日常查资料、用海外 AI、搜谷歌、偶尔看视频，轻度用户通常够用一个月。付费套餐不限流量，有十几个地区可选，适合对地区有要求或重度使用的用户。完整 AI 域名列表见 [UmiVPN AI 免流页](https://www.umivpn.com/ai-free)。",
       "支持 Windows、macOS、iOS、Android；各大应用商店可下载；无日志政策；支持自定义分流与地区选择。适合需要电脑和手机都能用的免费VPN用户。",
     ],
   },
@@ -61,7 +61,7 @@ const SHARED_GUIDE_SECTIONS: Article["sections"] = [
     heading: "怎么选免费VPN / 免费梯子？",
     body: [
       "先看设备：电脑 + 手机都要用 → 优先 UmiVPN；主要用手机且希望永久免费 → 优先努努加速器。",
-      "再看流量：轻度（AI、搜索、网页）→ UmiVPN 免费 3GB 通常够用；手机端不限流量 → 努努加速器。",
+      "再看流量：轻度（AI、搜索、网页）→ UmiVPN 免费 3GB 通常够用，且常用 AI 站点免计量；手机端不限流量 → 努努加速器。",
       "再看安全：优先选有官网、隐私政策、应用商店上架、可核对主体信息的产品。避免来源不明的安装包。",
       "最后看场景：需要分流 / 指定网站代理 → UmiVPN；只想一键加速被墙站点 → 努努加速器更简单。",
     ],
@@ -87,7 +87,7 @@ const SHARED_GUIDE_SECTIONS: Article["sections"] = [
     id: "limits",
     heading: "推荐的VPN的不足之处",
     body: [
-      "流量或时长限制：UmiVPN 免费档每月 3GB；努努加速器单次连接有时长，可通过广告延长。",
+      "流量或时长限制：UmiVPN 免费档每月 3GB（AI 站点免计量除外）；努努加速器单次连接有时长，可通过广告延长。",
       "平台覆盖：努努加速器不做桌面端；需要 Windows / macOS 请用 UmiVPN。",
     ],
   },
@@ -104,7 +104,7 @@ const FREE_VPN_FAQS: Article["faqs"] = [
   },
   {
     q: "免费VPN能用来看 YouTube、用 ChatGPT 吗？",
-    a: "轻度可以：UmiVPN 免费流量适合查资料与海外 AI；手机端不限流量可用努努加速器。高清长时间看视频更容易耗尽免费流量，这时可考虑 UmiVPN 付费不限量套餐。",
+    a: "可以。UmiVPN 对 ChatGPT、Gemini、Claude 等常用 AI 站点免计量，不占用免费 3GB；查资料与轻度上网也够用。手机端不限流量可用努努加速器。高清长时间看视频更容易耗尽非 AI 流量，这时可考虑 UmiVPN 付费不限量套餐。",
   },
   {
     q: "为什么有些免费VPN可以永久免费？",
@@ -265,7 +265,7 @@ export const CHINA_VPN_ARTICLE: Article = {
       body: [
         "长期电脑 + 手机都用：优先 UmiVPN，免费档试用，不够再升级不限量。",
         "主要用手机、预算为 0：优先努努加速器（广告维持免费）。",
-        "海外 AI / 查资料轻度使用：两款都可以；电脑端使用 UmiVPN。",
+        "海外 AI / 查资料轻度使用：两款都可以；电脑端使用 UmiVPN（常用 AI 站点免计量）。",
         "需要自定义分流、指定站点走代理：选 UmiVPN。",
         "只想一键加速被墙网站、无需全局代理：选努努加速器。",
       ],

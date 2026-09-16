@@ -216,8 +216,19 @@ export function RecommendArticle({ article }: { article: Article }) {
               </TableRow>
               <TableRow>
                 <TableCell className="pl-4 text-muted-foreground">流量</TableCell>
-                <TableCell>每月 3GB，付费套餐不限量</TableCell>
+                <TableCell>
+                  每月 3GB（部分AI 站点免计量），付费套餐不限量
+                </TableCell>
                 <TableCell className="pr-4">不限流量</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="pl-4 text-muted-foreground">
+                  AI 流量
+                </TableCell>
+                <TableCell>
+                  ChatGPT / Gemini / Claude 不计入额度
+                </TableCell>
+                <TableCell className="pr-4">无限流量</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell className="pl-4 text-muted-foreground">

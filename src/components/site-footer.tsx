@@ -30,6 +30,19 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link href="/恶意VPN的危害" className="hover:text-foreground">
+                  Windows恶意VPN风险
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/安卓恶意VPN的危害"
+                  className="hover:text-foreground"
+                >
+                  安卓恶意VPN风险
+                </Link>
+              </li>
+              <li>
                 <a
                   href="https://www.umivpn.com"
                   className="hover:text-foreground"

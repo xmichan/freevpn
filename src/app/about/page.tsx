@@ -53,6 +53,12 @@ export default function AboutPage() {
         <Button variant="outline" asChild>
           <Link href="/梯子推荐">梯子推荐</Link>
         </Button>
+        <Button variant="outline" asChild>
+          <Link href="/恶意VPN的危害">Windows恶意VPN</Link>
+        </Button>
+        <Button variant="outline" asChild>
+          <Link href="/安卓恶意VPN的危害">安卓恶意VPN</Link>
+        </Button>
       </div>
     </div>
   );

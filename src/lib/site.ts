@@ -10,8 +10,8 @@ export const SITE_NAME_ZH = "免费VPN推荐";
 export const SITE_TAGLINE =
   "2026年中国可用免费VPN推荐：UmiVPN（全平台）与努努加速器（手机永久免费）。应用商店可下，开源内核，适合轻度科学上网与海外 AI。";
 
-export const UPDATED_AT = "2026-09-17";
-export const UPDATED_AT_LABEL = "2026年9月17日";
+export const UPDATED_AT = "2026-09-23";
+export const UPDATED_AT_LABEL = "2026年9月23日";
 
 /** Primary search intents we optimize for on Bing China. */
 export const PRIMARY_KEYWORDS = [

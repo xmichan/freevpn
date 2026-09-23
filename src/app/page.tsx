@@ -145,7 +145,7 @@ export default function HomePage() {
       <section className="border-t bg-muted/20">
         <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
           <h2 className="text-2xl font-semibold tracking-tight">继续了解</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <Link
               href="/免费vpn推荐"
               className="rounded-xl border bg-background p-5 transition-colors hover:border-foreground/20"
@@ -171,6 +171,24 @@ export default function HomePage() {
               <h3 className="font-semibold">梯子推荐</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 翻墙软件下载与使用说明。
+              </p>
+            </Link>
+            <Link
+              href="/恶意VPN的危害"
+              className="rounded-xl border bg-background p-5 transition-colors hover:border-foreground/20"
+            >
+              <h3 className="font-semibold">Windows恶意VPN风险</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                管理员权限下恶意 VPN 的危害，以及为何选商店上架的 UmiVPN。
+              </p>
+            </Link>
+            <Link
+              href="/安卓恶意VPN的危害"
+              className="rounded-xl border bg-background p-5 transition-colors hover:border-foreground/20"
+            >
+              <h3 className="font-semibold">安卓恶意VPN风险</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                手机 VPN 权限与假 App 危害，以及如何选 UmiVPN / 努努加速器。
               </p>
             </Link>
           </div>

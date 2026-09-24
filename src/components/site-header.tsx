@@ -7,8 +7,8 @@ const NAV = [
   { href: "/免费vpn推荐", label: "免费VPN" },
   { href: "/中国可用vpn", label: "中国可用VPN" },
   { href: "/梯子推荐", label: "梯子推荐" },
-  { href: "/恶意VPN的危害", label: "Windows风险" },
-  { href: "/安卓恶意VPN的危害", label: "安卓风险" },
+  { href: "/恶意VPN的危害", label: "Windows上不可信VPN的隐患与风险" },
+  { href: "/安卓恶意VPN的危害", label: "安卓上不可信VPN的隐患与风险" },
   { href: "/about", label: "关于" },
 ];
 

@@ -7,8 +7,8 @@ const NAV = [
   { href: "/免费vpn推荐", label: "免费VPN" },
   { href: "/中国可用vpn", label: "中国可用VPN" },
   { href: "/梯子推荐", label: "梯子推荐" },
-  { href: "/恶意VPN的危害", label: "Windows上不可信VPN的隐患与风险" },
-  { href: "/安卓恶意VPN的危害", label: "安卓上不可信VPN的隐患与风险" },
+  { href: "/翻墙指南", label: "翻墙指南" },
+  { href: "/vpn下载", label: "VPN下载" },
   { href: "/about", label: "关于" },
 ];
 
@@ -16,7 +16,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/80">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="text-sm font-semibold tracking-tight">
+        <Link href="/" className="shrink-0 text-sm font-semibold tracking-tight">
           {SITE_NAME_ZH}
         </Link>
         <nav className="flex items-center gap-1 overflow-x-auto">

@@ -8,10 +8,10 @@ export const SITE_NAME = "Free VPN Recommendation";
 export const SITE_NAME_ZH = "免费VPN推荐";
 
 export const SITE_TAGLINE =
-  "2026年中国可用免费VPN推荐：UmiVPN（全平台）与努努加速器（手机永久免费）。应用商店可下，开源内核，适合轻度科学上网与海外 AI。";
+  "2026年中国可用免费VPN推荐：UmiVPN（全平台）与努努加速器（手机永久免费）。应用商店可下，开源内核，适合轻度翻墙与海外 AI。";
 
-export const UPDATED_AT = "2026-09-23";
-export const UPDATED_AT_LABEL = "2026年9月23日";
+export const UPDATED_AT = "2026-09-24";
+export const UPDATED_AT_LABEL = "2026年9月24日";
 
 /** Primary search intents we optimize for on Bing China. */
 export const PRIMARY_KEYWORDS = [
@@ -22,6 +22,11 @@ export const PRIMARY_KEYWORDS = [
   "免费梯子",
   "梯子推荐",
   "翻墙软件",
-  "科学上网",
+  "翻墙指南",
+  "VPN下载",
+  "电脑VPN",
+  "苹果VPN",
+  "安卓VPN",
   "AI免流",
+  "机场和VPN的区别",
 ] as const;

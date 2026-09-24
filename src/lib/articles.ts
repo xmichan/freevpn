@@ -74,7 +74,7 @@ const SHARED_GUIDE_SECTIONS: Article["sections"] = [
     id: "platforms",
     heading: "Windows / Mac / iPhone / Android 怎么下？",
     body: [
-      "UmiVPN：前往官网 [umivpn.com](https://www.umivpn.com) 按系统下载，或从对应应用商店搜索 UmiVPN。安装后登录，选择节点一键连接即可用于科学上网与海外 AI。",
+      "UmiVPN：前往官网 [umivpn.com](https://www.umivpn.com) 按系统下载，或从对应应用商店搜索 UmiVPN。安装后登录，选择节点一键连接即可用于翻墙与海外 AI。",
       "努努加速器：仅支持手机。在 App Store 或 Google Play 搜索「努努加速器」，或打开 [nunu.monster](https://www.nunu.monster) 按指引下载。适合 iOS / Android 用户找手机永久免费VPN。",
       "下载建议：尽量走官网或应用商店，不要使用来源不明的第三方「破解版 / 高速版」安装包。",
     ],
@@ -93,6 +93,25 @@ const SHARED_GUIDE_SECTIONS: Article["sections"] = [
     body: [
       "流量或时长限制：UmiVPN 免费档每月 3GB（AI 站点免计量除外）；努努加速器单次连接有时长，可通过广告延长。",
       "平台覆盖：努努加速器不做桌面端；需要 Windows / macOS 请用 UmiVPN。",
+    ],
+  },
+  {
+    id: "permanent-free",
+    heading: "「永久免费」是真的吗？",
+    body: [
+      "永久免费的档位确实存在——例如努努加速器公开以广告维持 ¥0 不限流量；UmiVPN 则长期提供免费 3GB 档作为试用入口。但「永久免费又不限量、又无广告、又完全不靠付费用户」的小众软件，成本从哪来往往说不清。",
+      "判断方法很简单：这家有没有说清商业模式？有付费升级或广告变现的，免费档通常是获客或补贴；完全说不清却要你装不明安装包的，风险更高。",
+      "免费额度适合应急与轻度使用；每天重度流媒体，升级付费往往比反复换免费额度更省时间。",
+    ],
+  },
+  {
+    id: "traffic-math",
+    heading: "免费额度够不够用？算一笔账",
+    body: [
+      "网页浏览、收发邮件、查资料：每小时大约几十 MB 量级，UmiVPN 免费 3GB 对轻度用户通常能撑较久；且 ChatGPT / Gemini / Claude 等常用 AI 站点免计量，不占这 3GB。",
+      "社交刷图文：消耗高于纯网页，但仍可能以小时计用完数 GB。",
+      "1080p 视频大约每小时吃 2–3GB——也就是说，靠免费档「天天看高清」并不现实。手机端若主要是访问被限制站点、接受广告，努努加速器的不限流量更对口。",
+      "结论：免费VPN是应急与轻度工具；长期重度使用，看 [中国可用VPN排行](/中国可用vpn) 里的付费档说明更合适。",
     ],
   },
 ];
@@ -124,7 +143,7 @@ export const FREE_VPN_ARTICLE: Article = {
   slug: "免费vpn推荐",
   path: "/免费vpn推荐",
   title: `免费VPN推荐 ${YEAR}｜中国能用的免费VPN / 免费梯子下载`,
-  description: `【${UPDATED_AT_LABEL}更新】免费VPN推荐：UmiVPN 全平台免费VPN，努努加速器手机永久免费。中国可用、应用商店可下，适合科学上网与海外 AI。`,
+  description: `【${UPDATED_AT_LABEL}更新】免费VPN推荐：UmiVPN 全平台免费VPN，努努加速器手机永久免费。中国可用、应用商店可下，适合翻墙与海外 AI。`,
   keywords: [
     "免费VPN",
     "免费vpn",
@@ -133,7 +152,6 @@ export const FREE_VPN_ARTICLE: Article = {
     "免费VPN下载",
     "中国可用VPN",
     "手机永久免费VPN",
-    "科学上网",
     "翻墙软件",
     "UmiVPN",
     "努努加速器",
@@ -154,6 +172,8 @@ export const FREE_VPN_ARTICLE: Article = {
     ...PRODUCT_SECTIONS,
     SHARED_GUIDE_SECTIONS[1],
     SHARED_GUIDE_SECTIONS[2],
+    SHARED_GUIDE_SECTIONS[5],
+    SHARED_GUIDE_SECTIONS[6],
     SHARED_GUIDE_SECTIONS[3],
     SHARED_GUIDE_SECTIONS[4],
   ],
@@ -161,8 +181,10 @@ export const FREE_VPN_ARTICLE: Article = {
   related: [
     { href: "/中国可用vpn", label: "中国可用VPN排行" },
     { href: "/梯子推荐", label: "梯子推荐" },
-    { href: "/不安全VPN的危害", label: "Windows上不安全VPN风险与危害" },
-    { href: "/安卓不安全VPN的危害", label: "安卓不安全VPN风险" },
+    { href: "/恶意VPN的危害", label: "Windows恶意VPN风险" },
+    { href: "/安卓恶意VPN的危害", label: "安卓恶意VPN风险" },
+    { href: "/翻墙指南", label: "翻墙指南" },
+    { href: "/vpn下载", label: "VPN下载教程" },
     { href: "/about", label: "关于本站 / 披露" },
   ],
 };
@@ -171,7 +193,7 @@ export const LADDER_ARTICLE: Article = {
   slug: "梯子推荐",
   path: "/梯子推荐",
   title: `梯子推荐 ${YEAR}｜中国可用翻墙软件 / 免费梯子下载`,
-  description: `【${UPDATED_AT_LABEL}更新】梯子推荐与翻墙软件下载：UmiVPN、努努加速器。中国可用免费梯子，支持电脑与手机，适合科学上网。`,
+  description: `【${UPDATED_AT_LABEL}更新】梯子推荐与翻墙软件下载：UmiVPN、努努加速器。中国可用免费梯子，支持电脑与手机，适合翻墙。`,
   keywords: [
     "梯子推荐",
     "梯子",
@@ -180,7 +202,6 @@ export const LADDER_ARTICLE: Article = {
     "翻墙软件下载",
     "中国可用",
     "免费VPN",
-    "科学上网",
     "UmiVPN",
     "努努加速器",
   ],
@@ -200,8 +221,19 @@ export const LADDER_ARTICLE: Article = {
       id: "ladder-vs-vpn",
       heading: "梯子、VPN、翻墙软件有什么区别？",
       body: [
-        "口语里三者经常混用。技术上 VPN 是一类加密隧道工具；「梯子」「翻墙软件」更多是中文用户对科学上网工具的统称，可能包含 VPN、代理客户端等形态。",
+        "口语里三者经常混用。技术上 VPN 是一类加密隧道工具；「梯子」「翻墙软件」更多是中文用户对翻墙工具的统称，可能包含 VPN、代理客户端等形态。",
         "选购时不必纠结名词：看能不能连、安不安全、适不适合你的设备。本页推荐的 UmiVPN 与努努加速器，就是面向中国网络环境的可用方案。",
+        "若还在纠结「机场」和 VPN 谁更好，先读 [机场和VPN的区别](/机场和vpn的区别)；完全新手建议先看 [翻墙指南](/翻墙指南)。",
+      ],
+    },
+    {
+      id: "good-ladder",
+      heading: "好梯子的几条硬标准",
+      body: [
+        "能在你的网络环境下连上——空谈国际服务器数量没有意义。",
+        "下载渠道可核对：官网或应用商店，而不是网盘破解包。",
+        "商业模式说得清：广告、免费档引流付费等都可以，关键是别装「永久免费无限速却完全不透明」的来路不明软件。",
+        "设备覆盖符合你的需求：电脑用 UmiVPN；手机永久免费用努努加速器。",
       ],
     },
     ...PRODUCT_SECTIONS,
@@ -218,14 +250,19 @@ export const LADDER_ARTICLE: Article = {
       q: "梯子和 VPN、翻墙软件是一回事吗？",
       a: "日常口语里常混用。本页推荐的 UmiVPN 与努努加速器，就是面向中国网络环境的可用方案，可按设备下载使用。",
     },
+    {
+      q: "免费梯子能长期用吗？",
+      a: "可以轻度长期用，但要接受流量或广告限制。重度使用更建议 UmiVPN 付费档。详见免费VPN推荐页的额度说明。",
+    },
     FREE_VPN_FAQS[2],
     FREE_VPN_FAQS[4],
   ],
   related: [
     { href: "/免费vpn推荐", label: "免费VPN推荐" },
     { href: "/中国可用vpn", label: "中国可用VPN排行" },
-    { href: "/不安全VPN的危害", label: "Windows上不安全VPN风险与危害" },
-    { href: "/安卓不安全VPN的危害", label: "安卓不安全VPN风险" },
+    { href: "/翻墙指南", label: "翻墙指南" },
+    { href: "/vpn下载", label: "VPN下载教程" },
+    { href: "/机场和vpn的区别", label: "机场和VPN的区别" },
     { href: "/about", label: "关于本站 / 披露" },
   ],
 };
@@ -235,14 +272,13 @@ export const CHINA_VPN_ARTICLE: Article = {
   slug: "中国可用vpn",
   path: "/中国可用vpn",
   title: `中国可用VPN排行 ${YEAR}｜${UPDATED_AT_LABEL}实测推荐`,
-  description: `【${UPDATED_AT_LABEL}更新】中国可用VPN排行：按设备与预算推荐 UmiVPN、努努加速器。适合搜 VPN、中国VPN、科学上网的用户快速选型。`,
+  description: `【${UPDATED_AT_LABEL}更新】中国可用VPN排行：按设备与预算推荐 UmiVPN、努努加速器。适合搜 VPN、中国VPN、翻墙的用户快速选型。`,
   keywords: [
     "VPN",
     "中国可用VPN",
     "中国VPN",
     "VPN排行",
     "VPN推荐",
-    "科学上网",
     "免费VPN",
     "UmiVPN",
     "努努加速器",
@@ -308,19 +344,22 @@ export const CHINA_VPN_ARTICLE: Article = {
   related: [
     { href: "/免费vpn推荐", label: "免费VPN推荐" },
     { href: "/梯子推荐", label: "梯子推荐" },
-    { href: "/不安全VPN的危害", label: "Windows上不安全VPN风险与危害" },
-    { href: "/安卓不安全VPN的危害", label: "安卓不安全VPN风险" },
+    { href: "/翻墙指南", label: "翻墙指南" },
+    { href: "/电脑vpn", label: "电脑 Windows VPN" },
+    { href: "/恶意VPN的危害", label: "Windows恶意VPN风险" },
+    { href: "/安卓恶意VPN的危害", label: "安卓恶意VPN风险" },
     { href: "/about", label: "关于本站 / 披露" },
   ],
 };
 
 /** Windows malware VPN risk education + UmiVPN recommendation. */
 export const MALWARE_VPN_ARTICLE: Article = {
-  slug: "不安全VPN的危害",
-  path: "/不安全VPN的危害",
-  title: `Windows上不安全VPN风险与危害 ${YEAR}｜如何挑选Windows VPN`,
+  slug: "恶意VPN的危害",
+  path: "/恶意VPN的危害",
+  title: `Windows恶意VPN风险与危害 ${YEAR}｜如何挑选Windows VPN`,
   description: `【${UPDATED_AT_LABEL}更新】Windows 上多数 VPN 需要管理员权限。说明流氓 / 来路不明 VPN 可能造成的危害，并推荐应用商店上架、经审核的 UmiVPN。`,
   keywords: [
+    "恶意VPN",
     "不安全VPN",
     "Windows VPN",
     "VPN管理员权限",
@@ -331,8 +370,8 @@ export const MALWARE_VPN_ARTICLE: Article = {
     "UmiVPN",
     "VX代理客户端",
   ],
-  h1: `Windows不安全VPN风险：管理员权限下可能造成多大危害？`,
-  breadcrumb: "不安全VPN风险",
+  h1: `Windows恶意VPN风险：管理员权限下可能造成多大危害？`,
+  breadcrumb: "恶意VPN风险",
   productsHeading: "更稳妥的选择：应用商店上架的 UmiVPN",
   productIds: ["umivpn"],
   showCompare: false,
@@ -396,7 +435,7 @@ export const MALWARE_VPN_ARTICLE: Article = {
         "优先走应用商店或厂商官网：商店上架通常经过身份与基础安全审核，流氓软件大规模分发成本更高；官网域名应可交叉验证（官网 ↔ 商店开发者主体）。",
         "不要为了「免费高速」关闭杀软、忽略证书警告，或按陌生教程一键「关闭 Windows Defender」。",
         "安装前看发布者、版本更新记录与用户评价；安装后若出现莫名开机启动项、异常外连、风扇狂转，应立即断网排查。",
-        "需要科学上网时，选可说明技术路线、有客服与披露信息的产品，而不是来路不明的「神器」。",
+        "需要翻墙时，选可说明技术路线、有客服与披露信息的产品，而不是来路不明的「神器」。",
         "优先选「沙盒版」商店应用，而不是随便一个 .exe：沙盒（App Container / MSIX 打包）里的应用默认进不了你的「下载」「文档」等个人文件夹，除非你主动用系统文件选择器授权，或对方申请了很宽的能力——这和普通 Win32 安装包「一运行就能翻你磁盘」差别很大。",
         "怎么判断是不是沙盒版：① 从 [Microsoft Store](https://apps.microsoft.com) 安装，且页面/名称写明 MSIX、UWP 或「商店应用」，而不是「Win32 / EXE 安装包」；② 安装后打开「设置 → 应用 → 已安装的应用」，该应用的来源显示为 Microsoft Store，且通常没有传统的 Setup.exe 解压到任意目录；③ 真正的沙盒应用一般装在系统的 WindowsApps 包目录下，不能像绿色软件那样拷来拷去随便跑。注意：微软商店里也可能上架「完整信任」的 Win32/EXE 版，那种权限更接近普通桌面软件，不能当作沙盒。",
         `[UmiVPN](https://www.umivpn.com) 提供 Microsoft Store 的沙盒版（[商店版 MSIX](https://apps.microsoft.com/detail/9N9HJP6DB31L)）：走商店分发与审核，并受 MSIX 沙盒隔离，比网盘里的来路不明 exe 更难静默读取你的下载文件夹。`,
@@ -447,20 +486,22 @@ export const MALWARE_VPN_ARTICLE: Article = {
     { href: "/免费vpn推荐", label: "免费VPN推荐" },
     { href: "/中国可用vpn", label: "中国可用VPN排行" },
     { href: "/梯子推荐", label: "梯子推荐" },
-    { href: "/安卓不安全VPN的危害", label: "安卓不安全VPN风险" },
+    { href: "/电脑vpn", label: "电脑 Windows VPN" },
+    { href: "/安卓恶意VPN的危害", label: "安卓恶意VPN风险" },
     { href: "/about", label: "关于本站 / 披露" },
   ],
 };
 
 /** Android malware VPN risk education + UmiVPN / Nunu recommendation. */
 export const ANDROID_MALWARE_VPN_ARTICLE: Article = {
-  slug: "安卓不安全VPN的危害",
-  path: "/安卓不安全VPN的危害",
-  title: `安卓不安全VPN风险与危害 ${YEAR}｜如何挑选 Android VPN`,
+  slug: "安卓恶意VPN的危害",
+  path: "/安卓恶意VPN的危害",
+  title: `安卓恶意VPN风险与危害 ${YEAR}｜如何挑选 Android VPN`,
   description: `【${UPDATED_AT_LABEL}更新】安卓流氓 VPN 为何比普通流氓 App 更危险：VpnService 可成为流量中间层。说明危害、挑选清单，并推荐 Google Play 可下的 UmiVPN 与努努加速器。`,
   keywords: [
     "安卓VPN",
     "Android VPN",
+    "恶意VPN",
     "不安全VPN",
     "VpnService",
     "假VPN",
@@ -470,8 +511,8 @@ export const ANDROID_MALWARE_VPN_ARTICLE: Article = {
     "UmiVPN",
     "努努加速器",
   ],
-  h1: `安卓不安全VPN为何更值得警惕？以及怎么挑`,
-  breadcrumb: "安卓不安全VPN风险",
+  h1: `安卓恶意VPN为何更值得警惕？以及怎么挑`,
+  breadcrumb: "安卓恶意VPN风险",
   productsHeading: "本站推荐：Google Play 可下的 UmiVPN 与努努加速器",
   summary:
     "优先从 Google Play 安装。需要分流 / 电脑同步用 UmiVPN；只要手机永久免费用努努加速器。",
@@ -570,7 +611,8 @@ export const ANDROID_MALWARE_VPN_ARTICLE: Article = {
     },
   ],
   related: [
-    { href: "/不安全VPN的危害", label: "Windows不安全VPN风险" },
+    { href: "/恶意VPN的危害", label: "Windows恶意VPN风险" },
+    { href: "/安卓vpn", label: "安卓 VPN 推荐" },
     { href: "/免费vpn推荐", label: "免费VPN推荐" },
     { href: "/中国可用vpn", label: "中国可用VPN排行" },
     { href: "/梯子推荐", label: "梯子推荐" },
@@ -578,12 +620,17 @@ export const ANDROID_MALWARE_VPN_ARTICLE: Article = {
   ],
 };
 
+import { GUIDE_ARTICLES } from "@/lib/guide-articles";
+
+export { GUIDE_ARTICLES };
+
 export const ARTICLES: Article[] = [
   FREE_VPN_ARTICLE,
   LADDER_ARTICLE,
   CHINA_VPN_ARTICLE,
   MALWARE_VPN_ARTICLE,
   ANDROID_MALWARE_VPN_ARTICLE,
+  ...GUIDE_ARTICLES,
 ];
 
 export function getArticleByPath(path: string): Article | undefined {

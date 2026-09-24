@@ -85,7 +85,7 @@ export default function HomePage() {
             寻找
             <span className="font-medium text-foreground"> 免费VPN </span>、
             <span className="font-medium text-foreground">中国可用VPN</span>
-            、免费梯子或科学上网方案？本站只推荐两款我们维护的产品：
+            、免费梯子或翻墙方案？本站只推荐两款我们维护的产品：
             <span className="font-medium text-foreground"> UmiVPN </span>
             （全平台）与
             <span className="font-medium text-foreground"> 努努加速器 </span>
@@ -101,6 +101,12 @@ export default function HomePage() {
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link href="/梯子推荐">梯子推荐</Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link href="/翻墙指南">翻墙指南</Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link href="/vpn下载">VPN下载</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <a
@@ -171,6 +177,69 @@ export default function HomePage() {
               <h3 className="font-semibold">梯子推荐</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 翻墙软件下载与使用说明。
+              </p>
+            </Link>
+            <Link
+              href="/翻墙指南"
+              className="rounded-xl border bg-background p-5 transition-colors hover:border-foreground/20"
+            >
+              <h3 className="font-semibold">翻墙指南</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                翻墙入门：先分清 VPN / 机场，再按设备下载。
+              </p>
+            </Link>
+            <Link
+              href="/vpn下载"
+              className="rounded-xl border bg-background p-5 transition-colors hover:border-foreground/20"
+            >
+              <h3 className="font-semibold">VPN下载教程</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Windows / Mac / iPhone / Android 官方安装步骤。
+              </p>
+            </Link>
+            <Link
+              href="/海外ai"
+              className="rounded-xl border bg-background p-5 transition-colors hover:border-foreground/20"
+            >
+              <h3 className="font-semibold">海外AI免流</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                ChatGPT / Claude 用不耗尽免费流量的办法。
+              </p>
+            </Link>
+            <Link
+              href="/电脑vpn"
+              className="rounded-xl border bg-background p-5 transition-colors hover:border-foreground/20"
+            >
+              <h3 className="font-semibold">电脑 Windows VPN</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                桌面端选型与商店版安装建议。
+              </p>
+            </Link>
+            <Link
+              href="/苹果vpn"
+              className="rounded-xl border bg-background p-5 transition-colors hover:border-foreground/20"
+            >
+              <h3 className="font-semibold">苹果 VPN</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                iPhone / iPad 上 UmiVPN 与努努怎么选。
+              </p>
+            </Link>
+            <Link
+              href="/安卓vpn"
+              className="rounded-xl border bg-background p-5 transition-colors hover:border-foreground/20"
+            >
+              <h3 className="font-semibold">安卓 VPN</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                优先 Google Play，避开侧载假包。
+              </p>
+            </Link>
+            <Link
+              href="/机场和vpn的区别"
+              className="rounded-xl border bg-background p-5 transition-colors hover:border-foreground/20"
+            >
+              <h3 className="font-semibold">机场和VPN的区别</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                计费、客户端与适合人群一次讲清。
               </p>
             </Link>
             <Link
